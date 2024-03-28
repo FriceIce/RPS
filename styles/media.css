@@ -1,0 +1,69 @@
+@media(height <= 700px){
+    .welcome-title{
+        font-size: 3rem;
+    }
+}
+
+@media (height < 670px){
+    .health-bar i{
+        font-size: 2.2rem;
+    }
+}
+
+/* --------------------------------------------------------------- */
+
+@media (width>650px) {
+
+    .battlefield {
+        flex-direction: row;
+    }
+    
+    .emoji:hover {
+        text-shadow: 0 0 10px white;
+        transform: scale(1.5);
+    }
+    
+    button, .emoji {
+        cursor: pointer;
+    }
+}
+@media (max-width: 450px){
+    .emojis{
+        height: 84px;
+    }
+    .emoji{
+        font-size: 3.5rem;
+    }
+}
+
+@media (width<650px){
+    .container-welcome{
+        height: 85vh;
+        width: 99%;
+        padding-bottom: 30px;
+    }
+
+    #health-bar-human{
+        top: 70%;
+    }
+
+    #health-bar-computer{
+        top: 23px;
+    }
+}
+
+@media (width <= 430px){
+    .avatar{
+        width: 50px;
+    }
+}
+/* Game over text in modal */
+@media (width <= 400px){
+    .game-styling{
+        margin-right: 30px;
+    }
+
+    .game-over-styling{
+        margin-left: 25%;
+    }
+}

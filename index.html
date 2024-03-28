@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/media.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.1/dist/confetti.browser.min.js"></script>    <script src="https://kit.fontawesome.com/8f932c8a25.js" crossorigin="anonymous"></script>
+    <script type="module" src="scripts/script.js"></script>
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <main>
+        <section class="container-welcome" id="containerWelcome">
+
+            <h1 class="welcome-title">Rock! <br> Paper! <br> Scissors!</h1>
+            <form class="name-form">
+                <div class="your-name">
+                    <div>
+                        <label style="display: block; padding-bottom: 5px;" for="nameInput">Username</label>
+                        <input type="text" id="nameInput">
+                    </div>
+                    
+                    <div class="character-container">
+                         <div class="choose-character-text">Choose Avatar</div>
+                        <ul class="choose-character">
+                            <li><img class="avatar" id="default" src="Image/soldier.png" alt="Medival knight avatar"></li>
+                            <li><img class="avatar" id="female-gamer" src="Image/female-gamer.png" alt="Female gamer avatar"></li>
+                            <li><img class="avatar" id="male-gamer" src="Image/male-gamer.png" alt="Male gamer avatar"></li>
+                            <li><img class="avatar" id="alien" src="Image/alien.png" alt="Alien avatar"></li>
+                        </ul>
+                    </div>
+                    <!-- Lizard-Spock Mode -->
+                    <div class="diff-container">
+                        <div class="checkbox-wrapper-3">
+                            <input type="checkbox" id="mode-toggle" />
+                            <label for="mode-toggle" class="toggle"><span></span></label>
+                        </div>
+                        <span class="diff-text">Lizard-Spock Mode</span>
+                        <button type="button" id="howto-btn"><i class="fa-solid fa-question fa-2xl" style="color: #630099;"></i></button>
+                    </div>
+                    <dialog class="howto-container">
+                        <div class="layout">
+                            <h4 class="howto-title">How to play Lizard-Spock Mode!</h4>
+                            <img id="howto-img" src="Image/RPSLS.webp" alt="A diagram of how to play Rock, Paper, Scissor, Lizard, Spock">
+                            <button type="button" id="howto-close"><i class="fa-solid fa-xmark fa-xl"></i></button>
+                            <button type="button" class="next-button">Next <i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </dialog>
+                </div>
+                <button type="submit" class="submit-btn" id="startBtn">Ready to Play!</button>
+            </form>
+        </section>
+        <section class="container-game" id="containerGame">
+            <dialog class="modal">
+                <div class="modal-wrapper">
+                    <h2 id="modal-title"></h2>
+                    <div class="modal-btns">
+                        <button type="button" class="modal-btn" id="home-btn">Home</button>
+                        <button type="button" class="modal-btn" id="again-btn">Play Again</button>
+                    </div>
+                </div>
+            </dialog>
+            <div class="battlefield">
+                <button type="button" class="arrow-btn"><i class="fa-solid fa-arrow-left"></i></button>
+                <div class="player-field" id="computerField">
+                    <div class="health-bar health-bar-computer" id="health-bar-computer">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="/Image/robot-icon.png" alt="Robot Icon">
+                    <h3>OPTIMUS PRIME</h3>
+                </div>
+                <h2 class="h2" id="result">VS</h2>
+                <div class="player-field" id="humanField">
+                    <h3>HUMAN</h3>
+                    <div class="health-bar health-bar-human" id="health-bar-human">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+                <!-- AUDIO -->
+                <audio type="audio/mp3"></audio>
+            </div>
+            <div class="emojis">
+                <button type="button" class="emoji" id="rock">👊</button>
+                <button type="button" class="emoji" id="paper">🤚</button>
+                <button type="button" class="emoji" id="scissors">✌️</button>
+                <button type="button" class="emoji" id="lizard">🤏</button>
+                <button type="button" class="emoji" id="spock">🖖</button>
+            </div>
+            <dialog class="modal">
+                <p></p>
+                <button id="home" style="display: block;" type="button">Home Screen</button>
+                <button id="continue" style="display: block;" type="button">Play Again</button>
+            </dialog>
+        </section>
+    </main>
+</body>
+</html>
